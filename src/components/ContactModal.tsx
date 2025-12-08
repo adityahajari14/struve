@@ -65,20 +65,20 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           </svg>
         </button>
 
-        <div className="h-full flex items-center p-8 md:p-12 lg:p-16">
-          <div className="w-full">
-            <h2 className="text-[40px] md:text-[50px] font-serif mb-8 md:mb-12">Contact</h2>
+        <div className="h-full flex items-start md:items-center p-6 md:p-8 lg:p-12 xl:p-16 py-12 md:py-8">
+          <div className="w-full pb-12 md:pb-0">
+            <h2 className="text-3xl md:text-[40px] lg:text-[50px] font-serif mb-6 md:mb-8 lg:mb-12">Contact</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
               {/* Left Column - Form */}
               <div>
-                <p className="text-[16px] mb-6">For inquiries, please leave us your details.</p>
+                <p className="text-sm md:text-base lg:text-[16px] mb-4 md:mb-6">For inquiries, please leave us your details.</p>
 
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                   {/* First Name and Last Name - Side by Side */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="firstName" className="block text-sm mb-2">
+                      <label htmlFor="firstName" className="block text-xs md:text-sm mb-2">
                         First Name *
                       </label>
                       <input
@@ -89,12 +89,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         onChange={handleChange}
                         required
                         maxLength={100}
-                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors"
+                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors text-sm md:text-base"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="lastName" className="block text-sm mb-2">
+                      <label htmlFor="lastName" className="block text-xs md:text-sm mb-2">
                         Last Name *
                       </label>
                       <input
@@ -105,15 +105,15 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         onChange={handleChange}
                         required
                         maxLength={100}
-                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors"
+                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors text-sm md:text-base"
                       />
                     </div>
                   </div>
 
                   {/* Email and Phone - Side by Side */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="email" className="block text-sm mb-2">
+                      <label htmlFor="email" className="block text-xs md:text-sm mb-2">
                         Email *
                       </label>
                       <input
@@ -125,12 +125,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         required
                         maxLength={250}
                         pattern="^.+@.+\.[a-zA-Z]{2,63}$"
-                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors"
+                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors text-sm md:text-base"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm mb-2">
+                      <label htmlFor="phone" className="block text-xs md:text-sm mb-2">
                         Phone
                       </label>
                       <input
@@ -140,14 +140,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         value={formData.phone}
                         onChange={handleChange}
                         maxLength={50}
-                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors"
+                        className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors text-sm md:text-base"
                       />
                     </div>
                   </div>
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm mb-2">
+                    <label htmlFor="message" className="block text-xs md:text-sm mb-2">
                       Message
                     </label>
                     <textarea
@@ -156,13 +156,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors resize-none"
+                      className="w-full bg-transparent border-b border-white/30 focus:border-white py-2 px-0 outline-none transition-colors resize-none text-sm md:text-base"
                     />
                   </div>
 
                   {/* Submit Success Message */}
                   {submitted && (
-                    <p className="text-[16px] text-green-400">
+                    <p className="text-sm md:text-base text-green-400">
                       Thanks for submitting!
                     </p>
                   )}
@@ -171,7 +171,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <div className="flex justify-end pt-2">
                     <button
                       type="submit"
-                      className="bg-white text-black px-8 py-2.5 font-medium hover:bg-gray-200 transition-colors"
+                      className="bg-white text-black px-6 md:px-8 py-2 md:py-2.5 font-medium hover:bg-gray-200 transition-colors text-sm md:text-base"
                     >
                       Submit
                     </button>
@@ -179,20 +179,20 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </form>
               </div>
 
-              {/* Right Column - Contact Info in 2 columns */}
-              <div className="grid grid-cols-2 gap-x-8 gap-y-6 h-fit">
+              {/* Right Column - Contact Info in 2 columns on desktop, 1 on mobile */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 md:gap-x-8 gap-y-6 md:gap-y-6 h-fit mt-8 lg:mt-0">
                 {/* Call */}
                 <div>
-                  <h3 className="text-[14px] font-bold mb-2">Call</h3>
-                  <p className="text-[14px] text-gray-300">+966 11 242 6606</p>
+                  <h3 className="text-sm md:text-sm lg:text-[14px] font-bold mb-2">Call</h3>
+                  <p className="text-sm md:text-sm lg:text-[14px] text-gray-300">+966 11 242 6606</p>
                 </div>
 
                 {/* Email */}
                 <div>
-                  <h3 className="text-[14px] font-bold mb-2">Email</h3>
+                  <h3 className="text-sm md:text-sm lg:text-[14px] font-bold mb-2">Email</h3>
                   <a 
                     href="mailto:info@stru-ve.com" 
-                    className="text-[14px] transition-colors"
+                    className="text-sm md:text-sm lg:text-[14px] transition-colors text-gray-300 hover:text-white"
                   >
                     info@stru-ve.com
                   </a>
@@ -200,25 +200,26 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
                 {/* Address */}
                 <div>
-                  <h3 className="text-[14px] font-bold mb-2">Address</h3>
-                  <div className="text-[14px] text-gray-300 leading-[1.5em]">
-                    <p>Anas Ibn Malik Road</p>
-                    <p>Al Malqa, Riyad</p>
-                    <p>P.O Box: 13521, Riyad</p>
-                    <p>Kingdom of Saudi Arabia</p>
-                  </div>
+                  <h3 className="text-sm md:text-sm lg:text-[14px] font-bold mb-2">Address</h3>
+                  <address className="text-sm md:text-sm lg:text-[14px] text-gray-300 not-italic leading-relaxed">
+                    8683-8729 Prince Abdulaziz<br />
+                    Ibn Musaid Ibn Jalawi Street,<br />
+                    As Sulimaniyah, Riyadh<br />
+                    P. O Box: 12234, Riyadh<br />
+                    Kingdom of Saudi Arabia
+                  </address>
                 </div>
 
                 {/* Social */}
                 <div>
-                  <h3 className="text-[14px] font-bold mb-2">Social</h3>
+                  <h3 className="text-sm md:text-sm lg:text-[14px] font-bold mb-2">Social</h3>
                   <div className="space-y-1">
                     <p>
                       <a 
                         href="https://www.instagram.com" 
                         target="_blank" 
                         rel="noreferrer noopener"
-                        className="text-[14px] text-gray-300 hover:text-white transition-colors"
+                        className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
                         Instagram
                       </a>
@@ -228,7 +229,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         href="https://www.facebook.com" 
                         target="_blank" 
                         rel="noreferrer noopener"
-                        className="text-[14px] text-gray-300 hover:text-white transition-colors"
+                        className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
                         Facebook
                       </a>
@@ -238,7 +239,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         href="https://www.linkedin.com" 
                         target="_blank" 
                         rel="noreferrer noopener"
-                        className="text-[14px] text-gray-300 hover:text-white transition-colors"
+                        className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
                         LinkedIn
                       </a>
@@ -248,7 +249,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         href="https://www.twitter.com" 
                         target="_blank" 
                         rel="noreferrer noopener"
-                        className="text-[14px] text-gray-300 hover:text-white transition-colors"
+                        className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
                         Twitter
                       </a>

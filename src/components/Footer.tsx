@@ -17,10 +17,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-white py-16 px-16">
-      <div className="space-y-12">
+    <footer className="w-full bg-white py-10 md:py-12 lg:py-16 px-4 md:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto space-y-8 md:space-y-10 lg:space-y-12">
         {/* Top Row: Confidentiality Policy and Disclaimer */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 text-center md:text-left">
           {/* Confidentiality Policy */}
           <div>
             <h3 className="text-sm font-bold text-[#E68126] mb-6">
@@ -47,56 +47,60 @@ export default function Footer() {
         </div>
 
         {/* Bottom Row: Newsletter and Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 text-center md:text-left">
           {/* Newsletter Signup */}
-          <div>
-            <h3 className="text-sm font-bold text-[#E68126] mb-6">
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-xs md:text-sm font-bold text-[#E68126] mb-4 md:mb-6">
               Sign up for our newsletter
             </h3>
-            <form onSubmit={handleSubmit} className="max-w-lg flex flex-row">
-              <div>
-                <label htmlFor="email" className="text-xs text-black block mb-3">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  pattern="^.+@.+\.[a-zA-Z]{2,63}$"
-                  maxLength={250}
-                  className="w-full min-w-sm px-0 py-2 border-b border-gray-400 bg-transparent focus:outline-none focus:border-[#E68126] text-sm"
-                />
+            <form onSubmit={handleSubmit} className="w-full max-w-lg">
+              <div className="flex flex-col gap-4">
+                <div className="w-full">
+                  <label htmlFor="email" className="text-xs text-black block mb-2 md:mb-3 text-center sm:text-left">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    pattern="^.+@.+\.[a-zA-Z]{2,63}$"
+                    maxLength={250}
+                    className="w-full px-0 py-2 border-b border-gray-400 bg-transparent focus:outline-none focus:border-[#E68126] text-xs md:text-sm text-center sm:text-left"
+                  />
+                </div>
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
+                  <button
+                    type="submit"
+                    aria-label="Sign up"
+                    className="text-xs md:text-sm text-black hover:text-[#E68126] transition-colors font-medium underline"
+                  >
+                    Sign up
+                  </button>
+                  {submitted && (
+                    <p className="text-xs md:text-sm font-bold text-gray-700">
+                      Thanks for submitting!
+                    </p>
+                  )}
+                </div>
               </div>
-              <button
-                type="submit"
-                aria-label="Sign up"
-                className="text-sm text-black hover:text-[#E68126] transition-colors"
-              >
-                Sign up
-              </button>
-              {submitted && (
-                <p className="text-sm font-bold text-gray-700">
-                  Thanks for submitting!
-                </p>
-              )}
             </form>
           </div>
 
           {/* Contact, Address, and Social Grid */}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 text-center sm:text-left">
             {/* Contact */}
             <div>
-              <h3 className="text-sm font-bold text-[#E68126] mb-6">Contact</h3>
-              <div>
-                <div className="flex flex-row gap-4">
-                  <p className="text-xs font-bold text-gray-800 mb-2">Call</p>
+              <h3 className="text-xs md:text-sm font-bold text-[#E68126] mb-4 md:mb-6">Contact</h3>
+              <div className="space-y-2">
+                <div className="flex flex-col sm:flex-row gap-1 sm:gap-3 md:gap-4 items-center sm:items-start justify-center sm:justify-start">
+                  <p className="text-xs font-bold text-gray-800">Call</p>
                   <p className="text-xs text-gray-600">+966 11 242 6606</p>
                 </div>
-                <div className="flex flex-row gap-4">
-                  <p className="text-xs font-bold text-gray-800 mb-2">Email</p>
+                <div className="flex flex-col sm:flex-row gap-1 sm:gap-3 md:gap-4 items-center sm:items-start justify-center sm:justify-start">
+                  <p className="text-xs font-bold text-gray-800">Email</p>
                   <a
                     href="mailto:info@stru-ve.com"
                     className="text-xs text-gray-600 hover:text-[#E68126] transition-colors"
@@ -109,7 +113,7 @@ export default function Footer() {
 
             {/* Address */}
             <div>
-              <h3 className="text-sm font-bold text-[#E68126] mb-6">Address</h3>
+              <h3 className="text-xs md:text-sm font-bold text-[#E68126] mb-4 md:mb-6">Address</h3>
               <address className="text-xs text-gray-600 not-italic leading-relaxed">
                 8683-8729 Prince Abdulaziz
                 <br />
@@ -125,8 +129,8 @@ export default function Footer() {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-sm font-bold text-[#E68126] mb-6">Social</h3>
-              <div className="flex flex-col gap-3 text-xs text-gray-600">
+              <h3 className="text-xs md:text-sm font-bold text-[#E68126] mb-4 md:mb-6">Social</h3>
+              <div className="flex flex-col gap-2 md:gap-3 text-xs text-gray-600">
                 <a
                   href="#"
                   className="hover:text-[#E68126] transition-colors"

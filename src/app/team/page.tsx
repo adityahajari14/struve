@@ -5,20 +5,20 @@ import team from '../../data/team.json';
 
 export default function TeamPage() {
   return (
-    <main className="w-full bg-white pt-24">
+    <main className="w-full bg-white pt-16 md:pt-20 lg:pt-24">
       {/* Our Team Section */}
-      <section className="w-full py-20 px-6 bg-gray-50">
+      <section className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-center text-[38px] font-serif text-gray-800  leading-normal">
+          <h1 className="text-center text-2xl md:text-3xl lg:text-[38px] font-serif text-gray-800  leading-normal">
             Our Team
           </h1>
           
           {/* Divider Line */}
-          <div className="w-10 h-[3px] bg-gray-800 mx-auto mb-16"></div>
+          <div className="w-10 h-[3px] bg-gray-800 mx-auto mb-10 md:mb-12 lg:mb-16"></div>
           
           {/* Description */}
-          <div className="max-w-4xl mx-auto text-center space-y-8 mb-8">
-            <p className="text-[16px] text-gray-800 leading-[1.5em]">
+          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8 mb-6 md:mb-8">
+            <p className="text-sm md:text-base lg:text-[16px] text-gray-800 leading-[1.5em]">
               <span className="font-bold">STRU<span className="text-[#E68126]">VE</span></span> team of experts is stretched all over the world, from KSA, the Middle East and USA, with our head office in Riyad, Kigdom of Saudi Arabia. As an international consultancy firm, we are fully equipped to provide our clients all over the world with bespoke value engineering services.
             </p>
             
@@ -32,19 +32,19 @@ export default function TeamPage() {
       {/* Key Members Section */}
       <section className="w-full py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-[38px] md:text-[50px] font-serif text-gray-800 mb-8 leading-normal">
+          <h2 className="text-center text-2xl md:text-3xl lg:text-[38px] xl:text-[50px] font-serif text-gray-800 mb-6 md:mb-8 leading-normal">
             <span className="font-bold">Key Members</span>
           </h2>
           
           {/* Divider Line */}
-          <div className="w-24 h-[2px] bg-gray-300 mx-auto mb-16"></div>
+          <div className="w-24 h-[2px] bg-gray-300 mx-auto mb-10 md:mb-12 lg:mb-16"></div>
           
           {/* Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
             {team.map((member) => (
               <div key={member.id} className="w-full max-w-[387px]">
                 {/* Member Image */}
-                <div className="relative w-full aspect-[387/409] bg-gray-200 mb-6 overflow-hidden">
+                <div className="relative w-full aspect-[387/409] bg-gray-200 mb-4 md:mb-6 overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -56,7 +56,7 @@ export default function TeamPage() {
                 
                 <div className='flex flex-row justify-between items-start'>
                     {/* Member Name */}
-                    <h3 className="text-[20px] font-bold text-gray-800 mb-3">
+                    <h3 className="text-lg md:text-xl lg:text-[20px] font-bold text-gray-800 mb-2 md:mb-3">
                     {member.name}
                     </h3>
                     
@@ -78,12 +78,12 @@ export default function TeamPage() {
                 
                 
                 {/* Position */}
-                <p className="text-[16px] text-gray-800 mb-4 leading-normal">
+                <p className="text-sm md:text-base lg:text-[16px] text-gray-800 mb-3 md:mb-4 leading-normal">
                   {member.position}
                 </p>
                 
                 {/* Description */}
-                <p className="text-[14px] text-gray-700 leading-[1.4em] text-justify">
+                <p className="text-xs md:text-sm lg:text-[14px] text-gray-700 text-justify leading-[1.6em]">
                   {member.description}
                 </p>
               </div>

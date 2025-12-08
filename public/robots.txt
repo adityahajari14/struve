@@ -1,0 +1,6 @@
+# robots.txt for STRUVE
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://struve.com/sitemap.xml

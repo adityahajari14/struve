@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function ServicesPage() {
 	return (
-		<main className="w-full bg-white pt-24" id="services">
+		<main className="w-full bg-white pt-16 md:pt-20 lg:pt-24" id="services">
 			{/* Section 1: How We Operate */}
 			<section className="grid grid-cols-1 lg:grid-cols-2 w-full gap-0">
 				{/* Text Column */}
-				<div className="px-16 py-14 lg:py-20 flex flex-col gap-7 lg:gap-9 justify-center max-w-4xl mx-auto">
-					<h1 className="text-[40px] lg:text-[50px] font-bold leading-tight text-[#444444]">
+				<div className="px-6 md:px-10 lg:px-16 py-10 md:py-14 lg:py-20 flex flex-col gap-5 md:gap-7 lg:gap-9 justify-center max-w-4xl mx-auto">
+					<h1 className="text-2xl md:text-3xl lg:text-[40px] xl:text-[50px] font-bold leading-tight text-[#444444]">
 						How
 						<br />
 						We Operate
