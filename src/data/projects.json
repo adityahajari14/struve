@@ -5,6 +5,10 @@
         "location": "USA",
         "category": "Aviation",
         "image": "/projects/aircraft-hanger-usa.webp",
+        "gallery": [
+            "/projects/aircraft-hanger-usa.webp",
+            "/projects/aircraft-hanger.webp"
+        ],
         "description": "An airlines company was seeking a solution to allow them to get a large airplane with high tail clearance requirement into an aircraft hangar which has already reached the allowable height limit of its zone and the roof height couldn't be further increased. The design was a series of trusses with maximum height at the middle of the hangar, where the tail needs to pass, and it tapers down towards the edges. There were double height office blocks, at each side of the hangar, which support the air handling units.",
         "valueEngineeringProposal": "As a result of our structural value engineering, we introduced a diagonal member connecting the outer office column at roof level to the truss at the eave, between the air handling units, and another member connecting the inner column to the first internal joint of the truss and changed the design of the truss to maximize the section at the edges and minimize the section in the middle, thus achieving the required headroom for the tail of the aircraft while achieving major tonnage reduction."
     },
@@ -14,6 +18,9 @@
         "location": "UAE",
         "category": "Hospitality",
         "image": "/projects/beach-resort-uae.webp",
+        "gallery": [
+            "/projects/beach-resort-uae.webp"
+        ],
         "description": "In this unique beach resort, there were a lot of elevated boardwalks servicing the water villas. These boardwalks were supported on double piles every 12m with longitudinal beams over the piles on each side and the services running between these beams. These boardwalks were only supporting pedestrian and buggy loads and were located in a completely sheltered area with very minor environmental loads.",
         "valueEngineeringProposal": "Our studies showed that the load on the 12m junction can be supported by a single pile. So we designed a 'U' shaped pile cap which will allow the passage of the services in the middle and deleted half the piles."
     },
@@ -23,6 +30,9 @@
         "location": "USA",
         "category": "Hospitality",
         "image": "/projects/beach-resort-usa.webp",
+        "gallery": [
+            "/projects/beach-resort-usa.webp"
+        ],
         "description": "While reviewing a beach resort with large areas of external timber decking, we noticed that all this decking was supported on a grid of concrete beam which, in their turn, were supported on hundreds of piles. When discussing the reason behind this heavy structure, consultant highlighted that there was a layer of silt at water table and the soil investigation recommended piling.",
         "valueEngineeringProposal": "After value engineering, the timber decking main runners were supported on leveled plinths resting on grade, thus saving a lot of unnecessary piles and tie beams. Our approach was that for settlement to occur in silt, it has to be subjected to sustained load which will initiate consolidation. In our case, this is an external seating area serving restaurants where the dead load is negligible and the live load is occasional and does not exceed 5% of the service time of the structure. Accordingly, the risk of settlement is negligible. Moreover; the timber decking has to be changed every 15 years so, if there is any visible settlement in the plinth at that time, it can be easily repaired."
     },
@@ -32,6 +42,10 @@
         "location": "USA",
         "category": "Commercial",
         "image": "/projects/car-parking-usa.webp",
+        "gallery": [
+            "/projects/car-parking-usa.webp",
+            "/projects/car-park-building.webp"
+        ],
         "description": "The project is a car park building with 18 x 9 m grid of columns. After structural review, we found out that a row of 1m deep x 1.5m wide RC beams at 3m centers were used to span the 18m bays. These beams were resting on a 1m deep x 2m wide RC beam spanning in the 9m direction. The dead of the slab was several time the parking load it was supporting.",
         "valueEngineeringProposal": "Our solution was to provide a 1m deep x 1.2m wide post-tensioned beam to span the 18m bay and a 200mm thick post-tensioned slab in the 8m direction, thus reducing the dead load considerably and achieving major cost savings."
     },
@@ -41,6 +55,10 @@
         "location": "UAE",
         "category": "Industrial",
         "image": "/projects/dry-dock-uae.webp",
+        "gallery": [
+            "/projects/dry-dock-uae.webp",
+            "/projects/dry-dock.webp"
+        ],
         "description": "The project consists of a dry dock with a diaphragm wall on three sides of the proposed excavation. The owner approached us for our opinion on two proposals he had to temporarily block the seaside of the excavation in order to allow dewatering and excavation to construct the raft which will serve as the dry dock floor and support the operable water gate.",
         "valueEngineeringProposal": "We studied the second solution (dam) with the aim of deleting the outside sheet piles and using ground anchors to support the inner sheet piles. This proved to be around half the cost. We provided a silt screen and started excavating and dumping in the sea to form a berm to house the anchors. Then we drove the sheet piles and started the dewatering and further excavation. When we reached the optimum anchor level we executed the anchors and carried on with the full excavation thus saving nearly half the cost."
     },
@@ -50,6 +68,9 @@
         "location": "USA",
         "category": "Infrastructure",
         "image": "/projects/elevated-roadway-usa.webp",
+        "gallery": [
+            "/projects/elevated-roadway-usa.webp"
+        ],
         "description": "While reviewing an elevated roadway supported on pile caps at 12m centers we noticed that the pile diameter was too high for the loads on this roadway. During our value engineering exercise, we were told that the critical load case was a truck breaking and, since the designer has provided joints at each pile cap, the whole breaking force was supported by a single pile cap, thus resulting in a heavy moment on the piles.",
         "valueEngineeringProposal": "We combined five spans together and provided joints every 60m. This way, the breaking force was distributed on 5 spans and the framing action of these connected bays produced further reduction from the cantilever condition. Accordingly, the piling requirement was reduced to one fourth the initial design."
     },
@@ -59,6 +80,9 @@
         "location": "UAE",
         "category": "Residential",
         "image": "/projects/highend-luxury-villa-uae.webp",
+        "gallery": [
+            "/projects/highend-luxury-villa-uae.webp"
+        ],
         "description": "The project consists of a large number of villas in a gated community. The soil consists of a homogeneous layer of soft silty clay at water table level 3m below the natural ground level. These villas were high end luxury villas with their own garden and swimming pool. There was a lot of hardscape and boundary walls which were all to be supported on piles according to the geotechnical recommendation and this resulted in a huge number of piles which drove the cost out of budget.",
         "valueEngineeringProposal": "After carefully assessing existing conditions, soil improvement was recommended. The site was vast with nothing around except a road on two sides so we recommended stone columns up to 50m from the roads and the rest of the site to be done by dynamic replacement. The cost savings were enormous and drove the cost well below budget."
     },
@@ -68,6 +92,9 @@
         "location": "UAE",
         "category": "Infrastructure",
         "image": "/projects/internal-road-network-uae.webp",
+        "gallery": [
+            "/projects/internal-road-network-uae.webp"
+        ],
         "description": "We were approached by a developer to check the necessity of introducing stone columns under internal roads in one of their projects where they were only building infrastructure and roads. After studying the soil investigation report we found that there was homogeneous layer of soft to medium clayey silt at water table level, 3m below the natural ground level on which the road is to be constructed. The site was flat and so were the roads.",
         "valueEngineeringProposal": "We highlighted to the developer that the risk of settlement in silts and clays is high when it is subjected to sustained load. In this case, the sustained load was only the weight of the asphalt in case of roads and nothing in case of infra which was buried underground. We investigated the main road outside the plot, which was on a similar soil and found out that nothing was provided underneath. After that we called in the geotechnical engineer and requested him to do a consolidation test and reconsider his requirements, after which his recommendation for stone columns was deleted, resulting in considerable cost and time saving."
     },
@@ -77,6 +104,9 @@
         "location": "UAE",
         "category": "Healthcare",
         "image": "/projects/medical-centre-uae.webp",
+        "gallery": [
+            "/projects/medical-centre-uae.webp"
+        ],
         "description": "The project is an iconic medical center with some large cantilever features which was designed using structural steel due to the light weight characteristic of this structural system. The design was done in the US, where the cost of constructing in steel was more or less the same as concrete construction.",
         "valueEngineeringProposal": "The structural value engineering exercise resulted in keeping the cantilevers in structural steel and redesigning the rest of the areas to RC solid slabs thus achieving major cost savings."
     },
@@ -86,6 +116,9 @@
         "location": "UAE",
         "category": "Religious",
         "image": "/projects/mosque-uae.webp",
+        "gallery": [
+            "/projects/mosque-uae.webp"
+        ],
         "description": "Our client was building a mosque in an area where cavities have been mapped. There was a network of cavities in the limestone underneath the site reaching down to 35 m (end of exploration). The largest mapped cavity dimension was 7m. The structure consisted of a basement and a ground floor and the column grid was 12m x 12m. The Municipal Engineer has requested the client to use 40m long piles with permanent casing under the columns and a suspended ground slab, which resulted in a very expensive foundation solution.",
         "valueEngineeringProposal": "We checked the properties of the limestone and found out that it was very sound and the water table was 14m below the foundation level so any further erosion would be far below the foundation. Still, we allowed a provisional increase in the largest cavity scenario to reach 10m diameter. We then introduced a grid of underground beams below the columns and modeled the raft with a 10m cavity in several critical locations. We checked the stresses in the beams and the rock and all was looking good. We met with local authorities and explained that the original solution was risky as the extent of the cavities was unknown and a case could occur right underneath one of the columns, which will cause catastrophic failure, while in our case the load is distributed and the raft is stiff so the risk is minimal. They adopted our proposal and major savings were achieved."
     },
@@ -95,6 +128,10 @@
         "location": "USA",
         "category": "Commercial",
         "image": "/projects/multipurpose-commercial-development-usa.webp",
+        "gallery": [
+            "/projects/multipurpose-commercial-development-usa.webp",
+            "/projects/multi-purpose-commercial-development.webp"
+        ],
         "description": "The project consists of 5 basements with three double-height (Mezzanine by tenant) floors above ground. The columns were on an 8m x 8m grid with tension piles underneath each column and a 1.5m thick raft.",
         "valueEngineeringProposal": "Since the raft is sitting on sound rock, our value engineering assessment reveals that we can shift the piles present underneath the columns to the middle of the 8 x 8 grid, where they can only resist uplift and let the column downward load bear directly on sound rock."
     },
@@ -104,6 +141,9 @@
         "location": "UAE",
         "category": "Commercial",
         "image": "/projects/office-building-extension-uae.webp",
+        "gallery": [
+            "/projects/office-building-extension-uae.webp"
+        ],
         "description": "A client had two existing office buildings in a key area and the regulation has changed, allowing more height in that area. He went to the building design consultant to explore the possibility to increase the number of floors. The consultant told him that the maximum that he could increase, with column strengthening, was two floors.",
         "valueEngineeringProposal": "We did some calculations and found out that, if we go to structural steel, we will be able to build six additional floors. After discussing our findings with the project consultant, and with the owner's support, the consultant adopted our approach and agreed to five additional floors."
     },
@@ -113,6 +153,10 @@
         "location": "UAE",
         "category": "Construction",
         "image": "/projects/piling-uae.webp",
+        "gallery": [
+            "/projects/piling-uae.webp",
+            "/projects/piling.webp"
+        ],
         "description": "We were approached by a piling contractor who had a pile load test of 60'000 kN. An initial design of six ground anchors and an assembly of built-up steel beams was studied for this purpose. The steel beams were placed in two tiers: one beam directly above the jack on top of the pile and two beams above in the perpendicular direction. The beams were connected at each end to the ground anchors.",
         "valueEngineeringProposal": "Our structural value engineering shows that the beam sections weren't efficiently utilized. We rearranged the assembly to have all beams in the same level, thus achieving bracing to the compression flange of the beam over the jack and then we tapered the beams away from the center. This resulted in saving more than half the tonnage."
     },
@@ -122,6 +166,9 @@
         "location": "USA",
         "category": "Residential",
         "image": "/projects/residential-towers-usa.webp",
+        "gallery": [
+            "/projects/residential-towers-usa.webp"
+        ],
         "description": "The project consists of towers and a large area 3 story building for car parking and plant. We noticed that 2m dia piles, with very heavy reinforcement, were used under this 3 story building and the owner was facing difficulty with the availability of piling contractors able to execute such a large diameter. During our discussions with the consultant on why such a pile was used under this 3 story building, they explained that the original soil was loose with a potential for liquifaction and there is an intended engineered backfill of 3m in 10 layers underneath the ground floor. The massive size and reinforcement of these piles was due to considering a horizontal force on these piles equal to the passive pressure developing from the 3m engineered fill as the land is trying to move towards the sea when the underlying soil liquifies in a seismic event.",
         "valueEngineeringProposal": "The value engineering resulted in deleting the 3m engineered backfill and investing the savings to replace the grade slab by a suspended slab. Leave the area below as an undercroft. Pile dia will reduce from 2m to 1m (1/4 the concrete volume) and reinforcement to 20% of original."
     },
@@ -131,6 +178,9 @@
         "location": "USA",
         "category": "Commercial",
         "image": "/projects/shopping-mall-usa.webp",
+        "gallery": [
+            "/projects/shopping-mall-usa.webp"
+        ],
         "description": "We were approached to check the ground slab design for a mall where the spans were 9m x 18m and piles were used to support the columns. The ground level was framed at a 9m x9m grid of beams supporting a 300mm heavily reinforced solid slab. Intermediate piles were introduced in the 18m direction solely to support these beams.",
         "valueEngineeringProposal": "We requested a saturated zone load test to be conducted on site at the worst borehole location, where a constant head of water was maintained for one month around a 3m x 3m loaded zone. When negligible settlement was recorded in the above test, we deleted the piles in the whole project and went to a shallow foundation solution with a 150mm grade slab, thus achieving massive savings."
     }

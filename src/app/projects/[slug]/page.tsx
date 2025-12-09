@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import projects from '../../../data/projects.json';
+import ImageModal from '../../../components/ImageModal';
 
 // Helper function to convert project name to slug
 function createSlug(name: string): string {
@@ -16,6 +18,9 @@ function createSlug(name: string): string {
 export default function ProjectDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   
   // Find project by matching slug
   const project = projects.find(p => createSlug(p.name) === slug);
@@ -33,6 +38,23 @@ export default function ProjectDetailPage() {
       </div>
     );
   }
+
+  const galleryImages = project.gallery || [project.image];
+
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const handleNextImage = () => {
+    setSelectedImageIndex((prev) => 
+      prev < galleryImages.length - 1 ? prev + 1 : prev
+    );
+  };
+
+  const handlePreviousImage = () => {
+    setSelectedImageIndex((prev) => prev > 0 ? prev - 1 : prev);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -90,33 +112,6 @@ export default function ProjectDetailPage() {
                 ))}
               </div>
             </div>
-
-            {/* Power in Numbers Section */}
-            <div className="py-16 border-t border-gray-200">
-              <h2 className="text-2xl md:text-3xl text-center font-serif text-gray-800 mb-20">
-                Power in Numbers
-              </h2>
-              
-              <div className="grid grid-cols-3 gap-12 md:gap-20 mb-20">
-                {/* Programs */}
-                <div className="text-center">
-                  <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-6 bg-gray-900"></div>
-                  <h3 className="text-lg md:text-xl text-gray-800">Programs</h3>
-                </div>
-                
-                {/* Locations */}
-                <div className="text-center">
-                  <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-6 bg-gray-900 rounded-full"></div>
-                  <h3 className="text-lg md:text-xl text-gray-800">Locations</h3>
-                </div>
-                
-                {/* Volunteers */}
-                <div className="text-center">
-                  <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-6 bg-gray-900" style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}}></div>
-                  <h3 className="text-lg md:text-xl text-gray-800">Volunteers</h3>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -128,16 +123,24 @@ export default function ProjectDetailPage() {
             Project Gallery
           </h2>
           
-          {/* Gallery Image - Smaller */}
-          <div className="mb-20">
-            <div className="relative aspect-[16/10] md:aspect-[4/3] max-w-sm bg-gray-200">
-              <Image
-                src={project.image}
-                alt={`${project.name} gallery`}
-                fill
-                className="object-cover"
-              />
-            </div>
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
+            {galleryImages.map((imageSrc, index) => (
+              <div
+                key={index}
+                className="relative aspect-[4/3] bg-gray-200 cursor-pointer overflow-hidden group"
+                onClick={() => handleImageClick(index)}
+              >
+                <Image
+                  src={imageSrc}
+                  alt={`${project.name} gallery image ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              </div>
+            ))}
           </div>
 
           {/* Navigation Buttons */}
@@ -166,6 +169,18 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={galleryImages[selectedImageIndex]}
+        imageAlt={`${project.name} gallery image ${selectedImageIndex + 1}`}
+        currentIndex={selectedImageIndex}
+        totalImages={galleryImages.length}
+        onNext={handleNextImage}
+        onPrevious={handlePreviousImage}
+      />
     </div>
   );
 }
