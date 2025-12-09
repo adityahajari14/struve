@@ -30,7 +30,7 @@ export default function Footer() {
               We fully understand the sensitivity of our role and the trust our
               clients have placed in us. We treat all information received from
               our clients with utmost regard towards confidentiality and
-              privacy. Even within our team, no information are shared unless
+              privacy. Even within our team, no information is shared unless
               cleared by senior management.
             </p>
           </div>
