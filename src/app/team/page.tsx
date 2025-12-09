@@ -32,7 +32,7 @@ export default function TeamPage() {
       {/* Key Members Section */}
       <section className="w-full py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-2xl md:text-3xl lg:text-[38px] xl:text-[50px] font-serif text-gray-800 mb-6 md:mb-8 leading-normal">
+          <h2 className="text-center text-2xl md:text-3xl lg:text-[38px] xl:text-[50px] font-serif text-gray-800 mb-6 leading-normal">
             <span className="font-bold">Key Members</span>
           </h2>
           
@@ -40,7 +40,7 @@ export default function TeamPage() {
           <div className="w-24 h-[2px] bg-gray-300 mx-auto mb-10 md:mb-12 lg:mb-16"></div>
           
           {/* Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 justify-items-center">
             {team.map((member) => (
               <div key={member.id} className="w-full max-w-[387px]">
                 {/* Member Image */}

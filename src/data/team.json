@@ -8,58 +8,58 @@
     },
     {
         "id": 2,
+        "name": "Kamal N. Najjar",
+        "position": "General Manager",
+        "image": "/team/team-kamal-najjar.webp",
+        "description": "Over the last 40 years, Mr. Najjar has undertaken several roles in the Civil/Structural engineering industry, from design to project management to representing mega project developers like Aldar and Red Sea Global. Throughout this period, he has designed and overseen the construction of a wide range of structures, from mixed use developments to public buildings to heavy industrial buildings and shoreline structures.\nMr. Najjar has noticed during this period that a lot of waste is taking place in large developments and has done an extensive study on the mechanisms resulting in this waste and the means of its prevention. Since the largest percentage, by far, of the materials being wasted is concrete, this waste delivers a direct boost to the carbon footprint of the projects. So, the idea of StruVE was born, with a dual win initiative: save money and save the planet at the same time."
+    },
+    {
+        "id": 3,
         "name": "Dr. Gregory McNulty",
         "position": "Head of Geotechnical Department",
         "image": "/team/team-mcnulty.webp",
         "description": "Over the last 30 years, Dr. McNulty has applied geotechnical, geo hydro mechanical, and structural engineering techniques to civil heavy infrastructure such as tunnels, interstate highways and airport runways, and delivered deep geologic repository design, mining approaches in a diverse range of geologies, underground test facilities. He has extensive experience in the design, engineering, procurement, material management, construction, commissioning, start up, turn over work processes, sequencing, and interfaces on over 5 large nuclear projects, including compliance with project controls, nuclear quality assurance, and finance requirements."
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Dr. Abdelwahab Tahsin",
         "position": "Head of Structural Department",
         "image": "/team/team-abdelwahab.webp",
         "description": "Over 30 years' experience in design, research and value engineering, working across a broad spectrum of challenging project typologies in the private and public sectors, publishing research, attending conferences on innovative technologies and latest breakthroughs in civil engineering. Heavy exposure and valuable contributions to geotechnical, civil and marine (shoreline) disciplines. International exposure and experience in leading multi-functional and cross cultural teams throughout the technical, financial, commercial and legal contract requirements, whilst ensuring stakeholder satisfaction."
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Dr. Tarek Khallaf",
         "position": "Manager of Geotechnical Department",
         "image": "/team/team-tarek.webp",
         "description": "A highly competent person with 20 years of experience in the field of geotechnical projects. Responsible for quality assessment & internal audits and Management coordination. Responsible for development and problem solving of geotechnical department and all laboratory activities."
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Dr. Elsayed Ibrahim",
         "position": "Manager of Structural Department",
         "image": "/team/team-elsayed-ibrahim.webp",
         "description": "Charter Structural Engineer, with more than 27 years' experience in structural and civil engineering with design and supervision. Design and analysis of structural systems, including systems for high rise buildings, Stadium, Schools, Hotels, Commercial buildings, Industrial buildings, showrooms and warehouses, precast buildings, under and on ground Rail Way."
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Dr. Magdy Bakry",
         "position": "Geotechnical Department Specialist Engineer",
         "image": "/team/team-magdy.webp",
         "description": "25 years' experience in High-rise Buildings, Infrastructure, Underground Metro, Airports, Car Parking, Cultural Centers, Heavy Industrial Facilities, Healthcare, Rehabilitation, Shoreline Structures and every geotechnical field."
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Dr. Ahmed Abdelsalam",
         "position": "Structural Department Specialist Engineer",
         "image": "/team/team-ahmed.webp",
         "description": "With 15 years of experience in High-rise projects and different structural engineering fields from early planning/feasibility studies to project completion."
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "Dr. Dalia Abdelrahman",
         "position": "BIM Manager",
         "image": "/team/team-dalia.webp",
         "description": "Civil Engineer with over 15-year experience in reputable consulting firms, engineering Project Management expert in industry projects. Skilled in Executive project management, Feasibility Studies, Digital transformation, technical coordination, contract administration, Quality Assurance, proposals writing and evaluation, monitoring, and evaluation. Experienced in database development and programming for project management as well as the use of BIM technology in project management and coordination of construction projects."
-    },
-    {
-        "id": 9,
-        "name": "Eng. Roua Al Houmaissi",
-        "position": "Business Development & Project Management",
-        "image": "/team/team-roua.webp",
-        "description": "Result-oriented engineer with a master degree in Geomechanics, civil engineering and risks assessment. Able to maintain and grow relationships with customers while achieving assigned sales and meeting client's needs. Proficient in focusing on customers with strategic growth opportunities and mastering face-to-face meetings. Excellent communicator with the innate ability to manage multiple tasks with competing deadlines. Offers a unique perspective with a dual background of both geotechnical engineering and business development plans."
     }
 ]
