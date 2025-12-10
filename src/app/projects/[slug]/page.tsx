@@ -78,7 +78,7 @@ export default function ProjectDetailPage() {
             <div className="mb-10">
               <Link 
                 href="/projects"
-                className="text-gray-600 hover:text-gray-800 text-sm transition-colors"
+                className="text-gray-600 hover:text-gray-800 text-base transition-colors"
               >
                 &lt; Back
               </Link>
