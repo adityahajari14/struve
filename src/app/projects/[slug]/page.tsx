@@ -78,7 +78,7 @@ export default function ProjectDetailPage() {
             <div className="mb-10">
               <Link 
                 href="/projects"
-                className="text-gray-600 hover:text-gray-800 text-base transition-colors"
+                className="relative inline-flex items-center text-gray-600 hover:text-gray-800 text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-orange-400 after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-200 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 &lt; Back
               </Link>
