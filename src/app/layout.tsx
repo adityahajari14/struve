@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "STRUVE - Structural Value Engineering",
   description: "STRUVE is an international engineering firm specializing in structural value engineering. We provide cost-effective solutions across KSA, Middle East, and USA.",
   icons: {
-    icon: '/favicon.webp',
+    icon: '/favicon.ico',
   },
 };
 
