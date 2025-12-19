@@ -16,21 +16,47 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '2196d9b6-e327-495e-956f-90b0cf3c15a7',
+          ...formData
+        })
       });
-    }, 3000);
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        console.error('Form submission failed:', result);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,17 +69,15 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   return (
     <>
       {/* Backdrop */}
-      <div 
-        className={`fixed inset-0 bg-black/50 z-[200] transition-opacity duration-300 ${
-          isOpen ? '' : 'hidden pointer-events-none'
-        }`}
+      <div
+        className={`fixed inset-0 bg-black/50 z-[200] transition-opacity duration-300 ${isOpen ? '' : 'hidden pointer-events-none'
+          }`}
         onClick={onClose}
       />
-      
+
       {/* Modal - Slides from right */}
-      <div className={`fixed top-0 right-0 h-full w-full md:w-[60%] lg:w-[70%] bg-[#242528] text-white z-[201] transition-transform duration-300 ease-in-out overflow-y-auto ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+      <div className={`fixed top-0 right-0 h-full w-full md:w-[60%] lg:w-[70%] bg-[#242528] text-white z-[201] transition-transform duration-300 ease-in-out overflow-y-auto ${isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -171,9 +195,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <div className="flex justify-end pt-2">
                     <button
                       type="submit"
-                      className="bg-white text-black px-6 md:px-8 py-2 md:py-2.5 font-medium hover:bg-gray-200 transition-colors text-sm md:text-base"
+                      disabled={isSubmitting}
+                      className="bg-white text-black px-6 md:px-8 py-2 md:py-2.5 font-medium hover:bg-gray-200 transition-colors text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Submit
+                      {isSubmitting ? 'Sending...' : 'Submit'}
                     </button>
                   </div>
                 </form>
@@ -190,8 +215,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 {/* Email */}
                 <div>
                   <h3 className="text-sm md:text-sm lg:text-[14px] font-bold mb-2">Email</h3>
-                  <a 
-                    href="mailto:info@stru-ve.com" 
+                  <a
+                    href="mailto:info@stru-ve.com"
                     className="text-sm md:text-sm lg:text-[14px] transition-colors text-gray-300 hover:text-white"
                   >
                     info@stru-ve.com
@@ -215,9 +240,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <h3 className="text-sm md:text-sm lg:text-[14px] font-bold mb-2">Social</h3>
                   <div className="space-y-1">
                     <p>
-                      <a 
-                        href="https://www.instagram.com" 
-                        target="_blank" 
+                      <a
+                        href="https://www.instagram.com"
+                        target="_blank"
                         rel="noreferrer noopener"
                         className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
@@ -225,9 +250,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       </a>
                     </p>
                     <p>
-                      <a 
-                        href="https://www.facebook.com" 
-                        target="_blank" 
+                      <a
+                        href="https://www.facebook.com"
+                        target="_blank"
                         rel="noreferrer noopener"
                         className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
@@ -235,9 +260,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       </a>
                     </p>
                     <p>
-                      <a 
-                        href="https://www.linkedin.com" 
-                        target="_blank" 
+                      <a
+                        href="https://www.linkedin.com"
+                        target="_blank"
                         rel="noreferrer noopener"
                         className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
@@ -245,9 +270,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       </a>
                     </p>
                     <p>
-                      <a 
-                        href="https://www.twitter.com" 
-                        target="_blank" 
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
                         rel="noreferrer noopener"
                         className="text-sm md:text-sm lg:text-[14px] text-gray-300 hover:text-white transition-colors"
                       >
